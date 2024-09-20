@@ -1,23 +1,33 @@
 # To-Do-List
-This project, though time-consuming, implements five essential features for task management:
+This program implements a menu-driven interface for efficiently managing a to-do list, utilizing a *do-while* loop to continually prompt user input until termination is explicitly requested. Users can dynamically interact with the system, performing operations such as adding new tasks, deleting existing entries, marking tasks as completed, displaying the full list, or exiting the program. This structured interaction allows for intuitive task management within an iterative, user-controlled environment.
+
+Below is a more detailed explanation of the five options in the To-Do List system:
 
 ### Option 1:
-Utilizing vectors and strings, users can efficiently add tasks to the To-Do List.
+- The program prompts the user to enter a task.
+- The task is added to the *listInput* vector.
+- The task is confirmed as added.
 
 ### Option 2:
-...
+- The user is prompted to enter the task they want to remove.
+- The program searches the list for the task and removes it if found.
+- If the task is found, it’s removed; otherwise, a "task not found" message is displayed
 
 ### Option 3:
-...
+- The user enters a task to mark as done.
+- If the task is found, "(Done)" is appended to it.
+- If the task is not in the list, a "task not found" message is shown.
 
 ### Option 4:
-...
+- All tasks in the list are printed, one per line.
 
 ### Option 5:
-A quit function allowing users to exit the program at any time.
+- A quit function allowing users to exit the program at any time.
 
-### Summary
-This To-Do list, built with C++, delivers a straightforward yet efficient task management solution. I trust you'll find it both functional and enjoyable. Cheers!
+
+Hope this is easy to understand and hopefully the code is easy to read. I'm finally improving a bit at C++. Hope I'll be able to do better and cooler projects in the future. Cheers.
+
+
 
 
 
