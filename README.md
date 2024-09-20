@@ -1,5 +1,5 @@
 # To-Do-List
-This program implements a menu-driven interface for efficiently managing a to-do list, utilizing a **do-while** loop to continually prompt user input until termination is explicitly requested. Users can dynamically interact with the system, performing operations such as adding new tasks, deleting existing entries, marking tasks as completed, displaying the full list, or exiting the program. This structured interaction allows for intuitive task management within an iterative, user-controlled environment.
+This program implements a menu-driven interface for efficiently managing a to-do list, uses a do-while loop to conntinually ask the user for an input until the user explictly requests the program to end. Users can interact with the system, performing operations such as adding new tasks, deleting existing entries, marking tasks as completed, displaying the full list, or exiting the program. This structured interaction allows for intuitive task management within an iterative, user-controlled environment.
 
 Below is a more detailed explanation of the five options in the To-Do List system:
 
