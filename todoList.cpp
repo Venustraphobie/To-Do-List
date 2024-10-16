@@ -3,6 +3,7 @@
 #include <vector>
 #include <algorithm>
 #include <limits> 
+#include <windows.h>
 
 
 int main(){
@@ -11,8 +12,7 @@ int main(){
     std::string task;
     bool found = false;
     bool isDone = false;
-
-    
+   
     
     std::cout << "To do List" << std::endl;
     std::cout << "Please choose one of the following options: " << std::endl;
@@ -31,7 +31,7 @@ do{
             std::getline(std::cin, task);
             listInput.push_back(task);
             std::cout << task << " has been added to the list." << std::endl;
-
+            Sleep(1000);
             std::cout << "Please choose one of the following options: " << std::endl;
             std::cout << "1. Add item" << std::endl;
             std::cout << "2. Delete item" << std::endl;
@@ -59,7 +59,7 @@ do{
             std::cout << task << " has been removed from the list." << std::endl;
         }   else {
             std::cout << "Task not found in the list." << std::endl;
-    }
+    }       Sleep(1000);
             std::cout << "Please choose one of the following options: " << std::endl;
             std::cout << "1. Add item" << std::endl;
             std::cout << "2. Delete item" << std::endl;
@@ -93,7 +93,7 @@ do{
     } else {
         std::cout << "Task not found in the list." << std::endl;
     }
-
+    Sleep(1000);
     std::cout << "Please choose one of the following options: " << std::endl;
     std::cout << "1. Add item" << std::endl;
     std::cout << "2. Delete item" << std::endl;
@@ -108,6 +108,7 @@ do{
             for (const auto& item : listInput) {
             std::cout << item << std::endl;
             }
+            Sleep(1000);
                 std::cout << "Please choose one of the following options: " << std::endl;
                 std::cout << "1. Add item" << std::endl;
                 std::cout << "2. Delete item" << std::endl;
@@ -133,4 +134,3 @@ do{
 return 0;
 }
 
-   
