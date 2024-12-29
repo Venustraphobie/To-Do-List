@@ -4,6 +4,8 @@
 #include <algorithm>
 #include <limits> 
 #include <windows.h>
+#include <fstream>
+
 
 
 int main(){
@@ -22,6 +24,7 @@ int main(){
     std::cout << "4. Display list" << std::endl;
     std::cout << "5. Exit" << std::endl;
     std::cin >> options;
+    Sleep(100);
 
 do{
     switch (options){ 
@@ -39,6 +42,7 @@ do{
             std::cout << "4. Display list" << std::endl;
             std::cout << "5. Exit" << std::endl;
             std::cin >> options;
+            Sleep(100);
             break;
     
         case 2:
@@ -55,11 +59,14 @@ do{
         }
     }
 
-            if (found) {
-            std::cout << task << " has been removed from the list." << std::endl;
-        }   else {
-            std::cout << "Task not found in the list." << std::endl;
-    }       Sleep(1000);
+            if(found){
+                std::cout << task << " has been removed from the list." << std::endl;
+                Sleep(1000);
+            }
+            else{
+                std::cout << "Task not found in the list." << std::endl;
+                Sleep(1000);
+            }
             std::cout << "Please choose one of the following options: " << std::endl;
             std::cout << "1. Add item" << std::endl;
             std::cout << "2. Delete item" << std::endl;
@@ -67,48 +74,47 @@ do{
             std::cout << "4. Display list" << std::endl;
             std::cout << "5. Exit" << std::endl;
             std::cin >> options;
-    break;
-            
-           
-    
-
+            Sleep(100);
     break;
 
-  
         case 3:
             std::cout << "Enter a task you wish to mark as done: ";
             std::cin.ignore();
             std::getline(std::cin, task);
 
-            for (size_t i = 0; i < listInput.size(); ++i) { // check if task is in list
-                if (listInput[i] == task) {
+            for(size_t i = 0; i < listInput.size(); i++){
+                if(listInput[i] == task){
                     listInput[i] += " (Done)";
                     found = true;
                     break;
-        }
-    }
+                }
+            }
 
-    if (found) {
-        std::cout << task << " has been marked as done." << std::endl;
-    } else {
-        std::cout << "Task not found in the list." << std::endl;
-    }
-    Sleep(1000);
-    std::cout << "Please choose one of the following options: " << std::endl;
-    std::cout << "1. Add item" << std::endl;
-    std::cout << "2. Delete item" << std::endl;
-    std::cout << "3. Mark item as done" << std::endl;
-    std::cout << "4. Display list" << std::endl;
-    std::cout << "5. Exit" << std::endl;
-    std::cin >> options;
-    break;
+            if(found){
+                std::cout << task << " has been marked as done." << std::endl;
+                Sleep(1000);
+            }
+            else{
+                std::cout << "Task not found in the list." << std::endl;
+                Sleep(1000);
+            }
+
+            std::cout << "Please choose one of the following options: " << std::endl;
+            std::cout << "1. Add item" << std::endl;
+            std::cout << "2. Delete item" << std::endl;
+            std::cout << "3. Mark item as done" << std::endl;
+            std::cout << "4. Display list" << std::endl;
+            std::cout << "5. Exit" << std::endl;
+            std::cin >> options;
+            Sleep(100);
+            break;
 
        case 4:{
             std::cout << "To-Do List:" << std::endl;
-            for (const auto& item : listInput) {
+            for (const auto& item : listInput){
             std::cout << item << std::endl;
-            }
             Sleep(1000);
+            }
                 std::cout << "Please choose one of the following options: " << std::endl;
                 std::cout << "1. Add item" << std::endl;
                 std::cout << "2. Delete item" << std::endl;
@@ -116,6 +122,7 @@ do{
                 std::cout << "4. Display list" << std::endl;
                 std::cout << "5. Exit" << std::endl;
                 std::cin >> options;
+                Sleep(100);
             break;
             }
                 break;
